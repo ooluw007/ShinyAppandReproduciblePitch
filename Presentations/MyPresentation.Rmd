@@ -77,7 +77,7 @@ summary(mtcars)
 ```
 
 
-## Example of a plot
+## Example of a plot.
 
 ```{r, fig.align='center', fig.cap="Plot showing Mile/gallon vs Weight", }
 plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "Mile/gallon")
