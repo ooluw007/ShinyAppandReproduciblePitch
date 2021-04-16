@@ -1,0 +1,85 @@
+---
+title: "MyFirst rMarkdown Presentation"
+author: "Olusanya Oluwole"
+date: "4/16/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## New Slides
+
+New slides are created with heading preceded by 2 ## signs.
+
+***
+
+You can create a slide with a heading (title) with 3 *** asterisks signs.
+
+## Title
+2 ## signs for title
+
+### Top Level Subtitle
+3 ### for top level subtitle
+
+#### Second Level Subtitle
+4 ### for second level subtitle and so on.
+
+## Make a List
+
+Use bullets
+
+- Bullet 1
+- Bullet 2 etc.
+
+Use numbering
+
+1. Item 1
+2. Item 2 etc.
+
+## Formatting
+
+Plain text
+
+*Italicized text*
+
+**Bold text**
+
+`Syntax highlight` e.g; `for (i %in% 1 : 10)`
+
+## Embelded R Code
+
+```{r}
+summary(mtcars)
+```
+
+## Remove Comment Characters "##" from Output
+```{r, comment=""}
+summary(mtcars)
+```
+
+
+## Show Code Used to Generate Output
+```{r, comment="", echo=TRUE}
+summary(mtcars)
+```
+
+
+## Show Code Used to Generate Output
+This can also be achieved by get rid of default knitter option
+```
+knitr::opts_chunk$set(echo = FALSE)
+```
+## Show Codes without Output
+```{r, comment="", eval=FALSE, echo=TRUE}
+summary(mtcars)
+```
+
+
+## Example of a plot
+
+```{r, fig.align='center', fig.cap="Plot showing Mile/gallon vs Weight", }
+plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "Mile/gallon")
+```
+
